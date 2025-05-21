@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html className="h-full" lang="en">
-      <body className="flex min-h-full flex-col antialiased">
+      <body className="flex min-h-full dark:bg-slate-900 dark:text-slate-200 flex-col antialiased">
         <Header />
         <main className="flex grow">
           <SideNav />

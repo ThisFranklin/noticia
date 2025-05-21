@@ -9,7 +9,7 @@ import CircleUserRoundIcon from "./components/CircleUserRoundIcon"
 function Header() {
 
   return (
-    <div className="flex gap-4 p-2 bg-slate-50 border-b border-zinc-300">
+    <div className="flex gap-4 p-2 dark:bg-slate-900 bg-slate-50 border-b border-zinc-300">
         <div className="flex gap-4 items-center pr-20">
             <MenuIcon />
             <div className="text-2xl font-semibold text-zinc-500">

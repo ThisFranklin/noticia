@@ -1,15 +1,7 @@
 "use client"
 import { Settings } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
-
-const settingsMenuItems = [
-  "Settings",
-  "Set dark mode",
-  "Your Opinion",
-  "Help",
-  "Downloads",
-  "Shortcuts"
-]
+import DarkMode from "./DarkMode"
 
 function SettingsIcon() {
     const [isHovered, setIsHovered] = useState(false)
@@ -45,13 +37,14 @@ function SettingsIcon() {
             Settings
         </p>
 
-        <div ref={refSettingsIcon} className={`absolute -left-[70%] border bg-white border-slate-300 rounded-lg shadow-md ${isClicked ? "block": "hidden"}`}>
+        <div ref={refSettingsIcon} className={`absolute -left-[70%] border bg-white dark:border-slate-900 border-slate-300 rounded-lg shadow-md ${isClicked ? "block": "hidden"}`}>
           <ul className="pt-2">
-              {
-                settingsMenuItems.map(menuItem => (
-                  <li className="pl-4 pr-8 cursor-pointer py-1 mb-1 hover:bg-neutral-300/60 text-lg font-medium text-gray-600 text-nowrap hover:text-gray-900" key={menuItem}>{menuItem}</li>
-                ))
-              }
+            <li className="settings-menu" key={"settings"}>Settings</li>
+            <DarkMode key={"dark-mode-toggle"} />
+            <li className="settings-menu" key={"your-opinion"}>Your opinion</li>
+            <li className="settings-menu" key={"help"}>Help</li>
+            <li className="settings-menu" key={"downloads"}>Downloads</li>
+            <li className="settings-menu" key={"shortcuts"}>Shortcuts</li>
           </ul>
         </div>
     </div>

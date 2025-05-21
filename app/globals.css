@@ -1,24 +1,23 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
-:root {
+/* :root {
   --background: #f1f1f1;
   --foreground: #171717;
 }
+ */
 
-
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
-
-body {
-  /* background: var(--background); */
-  /* color: var(--foreground); */
-  font-family: Arial, Helvetica, sans-serif;
-}
+} */
 
 .icon-style{
   @apply p-4 bg-transparent hover:rounded-[50%] hover:bg-zinc-200 hover:cursor-pointer;
+}
+
+.settings-menu{
+  @apply pl-4 pr-8 cursor-pointer py-1 mb-1 dark:hover:bg-slate-900 dark:hover:text-slate-200 hover:bg-neutral-300/60 text-lg font-medium text-gray-600 text-nowrap hover:text-gray-900;
 }
